@@ -1,0 +1,35 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+# Execute command
+POST     /exec               		controllers.GeneralController.exec()
+POST     /stop               		controllers.GeneralController.stop()
+
+# Get Nao status
+GET		 /status 					controllers.GeneralController.getStatus(uid: String)
+GET		 /getPicture				controllers.GeneralController.getPicture(id: String)
+
+# Save queue
+POST	 /saveQueue					controllers.GeneralController.saveQueue()
+
+# Delete queue
+POST	 /deleteQueue				controllers.GeneralController.deleteQueue()
+
+# Get queue items
+GET		 /queueItems				controllers.GeneralController.getQueueItems(id: String)
+
+# Perform login
+POST	 /login						controllers.AuthController.login()
+
+# Perform logout
+GET		 /logout					controllers.AuthController.logout()
+
+# Display login screen
+GET		 /auth						controllers.AuthController.start()

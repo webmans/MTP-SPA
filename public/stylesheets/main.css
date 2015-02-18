@@ -1,0 +1,495 @@
+html {
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	background-color: #B0B0B0;
+	font-family: 'Calibri', 'Arial', sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+body {
+	width: 100%;
+	min-width: 1000px;
+	min-height: 100%;
+	top: 0px;
+	margin: 0px;
+	overflow: auto;
+}
+
+.container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	min-width: 1000px;
+	min-height: 600px;
+}
+
+.panel {
+	height: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.panel .border-v {
+	width: 0px;
+	height: 97%;
+	float: left;
+	margin-top: 2%;
+	border: 2px solid #777777;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.panel .border-h {
+	width: 100%;
+	height: 0px;
+	float: left;
+	margin-top: -50px;
+	margin-left: 0%;
+	border: 2px solid #777777;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.commands {
+	width: 25%;
+}
+
+.queues {
+	width: 33%;
+}
+
+.status {
+	width: 42%;
+}
+
+.box {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.box.drop-active {
+	background-color: #777777;
+}
+
+.box.drop-hover {
+	background-color: #555555;
+}
+
+.box .ui-sortable-placeholder, .box .invisible {
+	display: none!important;
+}
+
+.simple_commands {
+	height: 65%;
+	padding-top: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 2%;
+	overflow: hidden;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.complex_commands {
+	height: 33%;
+	padding-top: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+	overflow: hidden;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.current_queue {
+	height: 65%;
+	padding-top: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 5%;
+	overflow: hidden;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.saved_queues {
+	height: 33%;
+	padding-top: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+	overflow: hidden;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.camera_picture {
+	height: 50%;
+	padding-bottom: 5%;
+	padding-top: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+	overflow: hidden;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.camera_picture .box {
+	overflow: hidden;
+}
+
+.camera_picture .cam {
+	width: 100%;
+	height: 100%;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.console {
+	height: 45%;
+	padding-top: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+	overflow: hidden;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.console .log {
+	width: auto;
+	clear: left;
+	margin-bottom: 8px;
+	padding-left: 130px;
+	padding-right: 10px;
+	text-align: justify;
+}
+
+.console .log .time {
+	margin-left: -130px;
+	float: left;
+}
+
+.console .log.error-0, .console .log.error-0 * {
+color: #CC0000;
+}
+
+.title {
+	width: auto;
+	height: 45px;
+	float: left;
+	margin-top: -45px;
+	margin-left: 15px;
+	line-height: 50px;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	text-shadow: 1px 1px #888888;
+}
+
+.panel .item {
+	height: 34px;
+	margin-top: 3px;
+	margin-right: 10px;
+	margin-left: 3px;
+	line-height: 34px;
+	font-size: 16px;
+	vertical-align: middle;
+	background-color: #999999;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.panel .item .play {
+	display: none;
+	width: 34px;
+	height: 34px;
+	float: right;
+	padding-right: 4px;
+	background-image: url('/assets/images/icons/play-small.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+}
+
+.panel .item:hover .play {
+	display: block;
+}
+
+.panel .item .delete {
+	display: none;
+	width: 34px;
+	height: 34px;
+	float: right;
+	padding-right: 4px;
+	background-image: url('/assets/images/icons/delete.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+}
+
+.panel .item:hover .delete {
+	display: block;
+}
+
+.panel .item:hover {
+	background-color: #777777;
+	cursor: pointer;
+}
+
+.item .name {
+	padding-left: 15px;
+	font-weight: bold;
+}
+
+.current_queue .ctrl {
+	visibility: hidden;
+	width: 144px;
+	height: 44px;
+	float: right;
+	margin-top: -55px;
+	padding-top: 13px;
+	padding-right: 0px;
+}
+
+.current_queue:hover .ctrl {
+	visibility: visible;
+}
+
+.current_queue .ctrl .start {
+	display: block;
+	width: 44px;
+	height: 44px;
+	float: left;
+	padding-right: 4px;
+	background-image: url('/assets/images/icons/play.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+}
+
+.current_queue .ctrl .stop {
+	display: block;
+	width: 44px;
+	height: 44px;
+	float: left;
+	padding-right: 4px;
+	background-image: url('/assets/images/icons/stop.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+}
+
+.current_queue .ctrl .clear {
+	display: block;
+	width: 44px;
+	height: 44px;
+	float: left;
+	padding-right: 4px;
+	background-image: url('/assets/images/icons/clear.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+}
+
+.current_queue .ctrl .save {
+	display: block;
+	width: 44px;
+	height: 44px;
+	float: left;
+	padding-right: 4px;
+	background-image: url('/assets/images/icons/save.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+}
+
+.login_area {
+	width: 400px;
+	height: auto;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.login_area .xtitle {
+	vertical-align: middle;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: 1px 1px #888888;
+	font-size: 80px;
+	margin-bottom: 20px;
+	color: #666666;
+}
+
+.login_area .xtitle.subtitle {
+	font-size: 40px;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+
+.login_area .text {
+	display: none;
+	text-align: center;
+	margin-bottom: 25px;
+	font-size: 16px;
+}
+
+.login_area label {
+	width: 100%;
+	margin-top: 10px;
+	padding-left: 15px;
+	padding-top: 20px;
+	padding-bottom: 4px;
+	text-align: left;
+	font-size: 24px;
+	font-weight: bold;
+	text-shadow: 1px 1px #888888;
+}
+
+.login_area input {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 15px;
+	padding-left: 3px;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: left;
+	font-size: 24px;
+	font-weight: bold;
+	text-shadow: 1px 1px #888888;
+	background-color: #999999;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.login_area input.submit {
+	width: 120px;
+	float: right;
+	margin-top: 20px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.login_area .box {
+	overflow: visible;
+}
+
+.system_alert {
+	z-index: 5;
+	width: auto;
+	height: auto;
+	position: fixed;
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: 15px;
+	padding: 5px;
+	font-size: 18px;
+	font-weight: bold;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+	text-shadow: 1px 1px #aaaaaa;
+}
+
+.system_alert.error {
+	color: #ffffff;
+	background-color: #990000;
+	border-left: 1px solid #cc0000;
+	border-top: 1px solid #cc0000;
+	border-right: 2px solid #330000;
+	border-bottom: 2px solid #330000;
+}
+
+.system_alert.info {
+	color: #1B59E0;
+	background-color: #cccccc;
+	border-left: 1px solid #ffffff;
+	border-top: 1px solid #ffffff;
+	border-right: 2px solid #aaaaaa;
+	border-bottom: 2px solid #aaaaaa;
+}
+
+.commands .params {
+	display: none;
+}
+
+.current_queue .item {
+	overflow: hidden;
+}
+
+.current_queue .command .name {
+	padding-left: 40px;
+}
+
+.current_queue .command.started .name {
+	background-image: url('/assets/images/icons/play-small.png');
+	background-repeat: no-repeat;
+	background-position: 4px 2px;
+}
+
+.current_queue .command.finished .name {
+	background-image: url('/assets/images/icons/done.png');
+	background-repeat: no-repeat;
+	background-position: 4px 2px;
+}
+
+.current_queue .params {
+	display: block;
+	padding-bottom: 5px;
+}
+
+.params label {
+	display: block;
+	float: left;
+	clear: left;
+	width: 120px;
+	text-align: right;
+	padding-right: 6px;
+	font-size: 16px;
+}
+
+.params input, .params select {
+	width: 100px;
+	padding: 3px;
+	font-size: 16px;
+	color: #000000;
+	border-left: 1px solid #dddddd;
+	border-top: 1px solid #dddddd;
+	border-right: 2px solid #aaaaaa;
+	border-bottom: 2px solid #aaaaaa;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.params select {
+	width: 108px;
+}

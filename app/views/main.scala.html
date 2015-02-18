@@ -1,0 +1,156 @@
+@(simple_commands: ArrayList[Command])(complex_commands: ArrayList[Command])(saved_queues: ArrayList[models.Queue])
+
+			<div class="panel commands">
+			
+				<div class="simple_commands">
+				
+					<div class="title">
+					
+						Simple Commands
+					
+					</div>
+					
+					<ul class="box command_sortable">
+					
+						@for((item, i) <- simple_commands.zipWithIndex) {
+						
+							@command(command = item)
+						
+						}
+					
+					</ul>
+				
+				</div>
+				
+				<div class="complex_commands">
+				
+					<div class="border-h">
+					
+					</div>
+					
+					<div class="title">
+					
+						Complex Commands
+					
+					</div>
+					
+					<ul class="box">
+					
+						@for((item, i) <- complex_commands.zipWithIndex) {
+						
+							@command(command = item)
+						
+						}
+					
+					</ul>
+				
+				</div>
+			
+			</div>
+			
+			<div class="panel queues">
+			
+				<div class="border-v">
+				
+				</div>
+			
+				<div class="current_queue">
+				
+					<div class="ctrl">
+					
+						<div class="start">
+						
+						</div>
+						
+						<div class="save">
+						
+						</div>
+						
+						<div class="clear">
+						
+						</div>
+					
+					</div>
+					
+					<div class="title">
+					
+						Current Queue
+					
+					</div>
+					
+					<ul class="box command_sortable">
+					
+						
+					
+					</ul>
+				
+				</div>
+				
+				<div class="saved_queues">
+				
+					<div class="border-h">
+					
+					</div>
+					
+					<div class="title">
+					
+						Saved Queues
+					
+					</div>
+					
+					<ul class="box">
+					
+						@for((item, i) <- saved_queues.zipWithIndex) {
+						
+							@queue(queue = item)
+						
+						}
+					
+					</ul>
+				
+				</div>
+			
+			</div>
+			
+			<div class="panel status">
+			
+				<div class="border-v">
+				
+				</div>
+				
+				<div class="camera_picture">
+				
+					<div class="title">
+					
+						Nao Camera Picture
+					
+					</div>
+					
+					<div class="box">
+					
+					</div>
+				
+				</div>
+				
+				<div class="console">
+				
+					<div class="border-h">
+					
+					</div>
+					
+					<div class="title">
+					
+						Nao Status Console
+					
+					</div>
+					
+					<div class="box">
+					
+						
+					
+					</div>
+				
+				</div>
+			
+			</div>
+
