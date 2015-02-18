@@ -107,7 +107,6 @@
 	<classpathentry kind="lib" path="C:/ProgramData/play-2.1.0/repository/local/org.easytesting/fest-assert/1.4/jars/fest-assert.jar"/>
 	<classpathentry kind="lib" path="C:/ProgramData/play-2.1.0/repository/local/org.easytesting/fest-util/1.1.6/jars/fest-util.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.21-bin.jar"/>
-	<classpathentry kind="lib" path="lib/jnaoqi-1.14.0.218.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/ProgramData/play-2.1.0/framework/sbt/boot/scala-2.10.0/lib/scala-library.jar"/>
 	<classpathentry kind="output" path="bin"/>

@@ -8,7 +8,6 @@ import controllers.AuthController;
 public class Queue {
 	private String id;
 	private String name;
-	private Command[] items;
 	private String params;
 	private User user;
 	private long time;

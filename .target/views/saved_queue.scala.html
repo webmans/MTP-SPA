@@ -1,0 +1,7 @@
+@(queue: models.Queue)
+
+@for((item, i) <- queue.getItems().zipWithIndex) {
+
+	@command(command = item, queue = queue, cmdNum = i)
+
+}

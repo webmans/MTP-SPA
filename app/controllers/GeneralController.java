@@ -8,13 +8,6 @@ import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
-import com.aldebaran.proxy.Variant;
-
-import nao.Nao;
-
-import exceptions.NaoCommandInvokeException;
-
-import models.Command;
 import models.Parameters;
 import models.Queue;
 import play.*;

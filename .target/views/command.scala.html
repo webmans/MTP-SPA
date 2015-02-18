@@ -1,0 +1,67 @@
+@(command: Command, queue: models.Queue = null, cmdNum: Integer = 0)
+
+<li class="command item" data-id="@command.getId()">
+
+  <div class="name">
+  
+  	<div class="play">
+  	
+  	</div>
+  
+  	@command.getName()
+  
+  </div>
+  
+  <div class="params">
+  
+    @if(!command.getParams().equals("")) {
+    
+	  	@for((param, i) <- command.getParams().split("\\|").zipWithIndex) {
+		
+			<div class="param param-@i">
+			
+				<label>@param.split(":").apply(0)</label>
+				
+				@if(param.contains("[")) {
+				
+					<select class="selector">
+					
+						@for((option, ii) <- param.split(":").apply(1).replace("[", "").replace("]", "").split(",").zipWithIndex) {
+						
+							@if(queue != null && option.equals(queue.getParams().split("\\|").apply(cmdNum).split(";").apply(i))) {
+							
+								<option value="@option" selected="selected">@option</option>
+							
+							} else {
+							
+								<option value="@option">@option</option>
+							
+							}
+						
+						}
+					
+					</select>
+				
+				} else {
+				
+					@if(queue != null && queue.getParams().split("\\|").apply(cmdNum).split(";").apply(i) != null) {
+							
+						<input type="text" class="@param.split(":").apply(1).split("=").apply(0).toLowerCase()" value="@queue.getParams().split("\\|").apply(cmdNum).split(";").apply(i)" />
+					
+					} else {
+					
+						<input type="text" class="@param.split(":").apply(1).split("=").apply(0).toLowerCase()" value="@param.split(":").apply(1).split("=").apply(1)" />
+					
+					}
+				
+				}
+			
+			</div>
+		
+		}
+	
+	}
+  
+  </div>
+
+</li>

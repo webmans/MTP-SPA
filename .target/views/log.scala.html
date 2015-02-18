@@ -1,0 +1,13 @@
+@(error: String = "0", msg: String = "")
+
+<div class="log error-@error">
+
+	<div class="time">
+	
+		@{new Date().format("yyyy/MM/dd hh:mm")}
+	
+	</div>
+	
+	@msg
+
+</div>
